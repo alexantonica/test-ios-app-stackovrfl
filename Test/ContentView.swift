@@ -13,6 +13,11 @@ struct ContentView: View {
     
     var body: some View {
         
+//        You can uncomment the bellow if you wanna test teh DispatchQue
+//        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5)) {
+//            appState.routing.currentRoute = .noInternet
+//        }
+        
         switch appState.routing.currentRoute {
         case .noInternet:
             return AnyView(NoInternetView())
